@@ -1,0 +1,352 @@
+.hero {
+    position: relative;
+    margin: 0 auto;
+    background-image: linear-gradient(
+        180deg,
+        rgba(1, 33, 105, 0.3) 0%,
+        rgba(255, 255, 255, 0.9) 74.77%
+      ),
+      url(../../images/LA.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 250px;
+  }
+  .ticket {
+    width: 560px;
+    height: 1068px;
+  }
+  .ticket__options {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 128px;
+    left: 704px;
+  }
+  .option {
+    margin-right: -7px;
+    width: 116px;
+    height: 47px;
+    background-image: url(../../images/settingsW_bg.svg);
+  }
+  .option__icon {
+    position: absolute;
+    top: 7px;
+    left: 41px;
+  }
+  .option__transport {
+    margin-right: -7px;
+    width: 116px;
+    height: 47px;
+    background-image: url(../../images/transportB_bg.svg);
+  }
+  .option__icon__transport {
+    position: absolute;
+    left: 147px;
+    top: 5px;
+  }
+  .option__notification {
+    width: 116px;
+    height: 47px;
+    background-image: url(../../images/bellW_bg.svg);
+  }
+  .option__icon__bell {
+    position: absolute;
+    left: 257px;
+    top: 10px;
+  }
+  .details__thumb {
+    width: 560px;
+    height: 1150px;
+    justify-content: space-between;
+    position: absolute;
+    top: 190px;
+    left: 442px;
+    background: #ffffff;
+    border-radius: 20px 0px 20px 20px;
+    padding-left: 29px;
+  }
+  
+  .travel {
+    position: relative;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3db1ec;
+    width: 530px;
+    padding-bottom: 28px;
+    margin-top: 27px;
+  }
+  
+  .icon_printer {
+    margin-right: 25px;
+    margin-left: 290px;
+  }
+  .icon_pencil {
+    position: absolute;
+    top: 4px;
+    left: 135px;
+  }
+  .ticket__thumb {
+    width: 535px;
+    height: 950px;
+    background: #ffffff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+  }
+  .price__options {
+    display: flex;
+    padding-top: 15px;
+    margin-left: 14px;
+    margin-right: 14px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  .cheapest {
+    padding: 4px 14px 4px 14px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #32a7ed;
+    background: rgba(50, 167, 237, 0.2);
+    border-radius: 15.5px;
+    outline: none;
+  }
+  .time {
+    padding: 2px 5px 2px 5px;
+    margin-right: 10px;
+    margin-left: 220px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 15.5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .best__price {
+    padding: 2px 5px 2px 5px;
+  
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 15.5px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .routes {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .route {
+    margin-left: 45px;
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .icon__bus {
+    left: -42px;
+    position: absolute;
+  }
+  .border {
+    position: absolute;
+    top: 65px;
+    left: -22px;
+    border-bottom: 3px solid #f1b31c;
+    transform: rotate(90deg);
+    width: 75px;
+  }
+  .border__pink {
+    position: absolute;
+    top: 65px;
+    left: -22px;
+    border-bottom: 3px solid #e37882;
+    transform: rotate(90deg);
+    width: 75px;
+  }
+  .border__blue {
+    position: absolute;
+    top: 65px;
+    left: -22px;
+    transform: rotate(90deg);
+    width: 75px;
+    border-bottom: 3px solid #32a7ed;
+  }
+  .direction {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-right: 228px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .direction__svg {
+    margin-right: 6px;
+  }
+  .route__details {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+  }
+  .route__distances {
+    margin-right: 30px;
+    margin-top: 9px;
+  }
+  .route__distance {
+    margin-bottom: 9px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .distance__icon {
+    margin-right: 3px;
+    vertical-align: bottom;
+  }
+  .ticket__btn {
+    position: absolute;
+    top: 20px;
+    left: 330px;
+    width: 130px;
+    height: 31px;
+    background: #f1b31c;
+    border-radius: 15.5px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: middle;
+    color: #ffffff;
+    border: none;
+  }
+  .ticket__btn__pink {
+    position: absolute;
+    top: 20px;
+    left: 330px;
+    width: 130px;
+    height: 31px;
+    background: #f1b31c;
+    border-radius: 15.5px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: middle;
+    color: #ffffff;
+    border: none;
+    background-color: #e37882;
+  }
+  .ticket__btn__blue {
+    position: absolute;
+    top: 20px;
+    left: 330px;
+    width: 130px;
+    height: 31px;
+    background: #f1b31c;
+    border-radius: 15.5px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: middle;
+    color: #ffffff;
+    border: none;
+    background-color: #32a7ed;
+  }
+  .final__destination {
+    margin-left: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .final__destination__icon {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  .notification {
+    display: flex;
+    align-items: center;
+    padding: 6px 14px 6px 14px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 15px;
+    margin-right: 15px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+  }
+  .notification__icon {
+    margin-right: 12px;
+  }
+  .ticket__buttons {
+    display: flex;
+  }
+  .download__btn {
+    margin-left: 14px;
+    margin-right: 8px;
+    font-family: 'Montserrat';
+    width: 169px;
+    height: 31px;
+    background: linear-gradient(89.87deg, #e27582 0.1%, #eaa07b 99.88%);
+    border-radius: 15.5px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #ffffff;
+    border: #ffffff;
+  }
+  .button__icon {
+    vertical-align: text-top;
+  }
+  .button__text {
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  .save__btn {
+    font-family: 'Montserrat';
+    width: 190px;
+    height: 31px;
+    background: linear-gradient(89.87deg, #3aadec 0.1%, #62d1e4 99.88%);
+    border-radius: 15.5px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+  }
+  .button__search {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 187px;
+    height: 31px;
+    color: #fff;
+    background: linear-gradient(89.87deg, #e27582 0.1%, #eaa07b 99.88%);
+    border: none;
+    border-radius: 15.5px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .search__text {
+    margin-left: 7px;
+    vertical-align: super;
+  }
+  

@@ -1,0 +1,38 @@
+.header__features {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+  padding-top: 39px;
+  margin: 0;
+}
+.header__feature:not(:last-child) {
+  margin-right: 30px;
+}
+.login__icon {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.button__login {
+  width: 127px;
+  height: 30px;
+  background: linear-gradient(89.87deg, #e27582 0.1%, #e9a383 99.88%);
+  border-radius: 15.5px;
+  margin-right: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  border: 1px #fff;
+}
+.login__text {
+  vertical-align: middle;
+}
+.header__images__left {
+  vertical-align: text-top;
+  margin-right: 8px;
+}
+.header__images__right {
+  vertical-align: middle;
+  margin-left: 8px;
+}

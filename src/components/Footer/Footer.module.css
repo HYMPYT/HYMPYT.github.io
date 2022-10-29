@@ -1,0 +1,29 @@
+.footer__background {
+  background-image: url(../../images/footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.triplanner {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  padding-top: 30px;
+  padding-left: 116px;
+}
+.footer__links {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration-line: underline;
+  color: #ffffff;
+}
+.links__thumb {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-right: 93px;
+}
+.link {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,353 @@
+.ticket__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #3aadec;
+}
+.ticket__container {
+  margin-top: 20px;
+  background: #ffffff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  width: 559px;
+  height: 1239px;
+  border-radius: 15px;
+  padding-bottom: 120px;
+}
+
+.ticket {
+  margin-top: 17px;
+  background: #ffffff;
+}
+
+.offered__ticket {
+  display: block;
+  margin-left: 30px;
+  width: 500px;
+  box-shadow: 2px 2px 10px rgba(0, 00, 0, 0.15);
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+.input__direction {
+  padding-left: 35px;
+  width: 422px;
+  height: 37px;
+  background: #ffffff;
+  border: 1px solid #32a7ed;
+  border-radius: 26px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.input__date {
+  width: 185px;
+  height: 37px;
+  background: #ffffff;
+  border: 1px solid #32a7ed;
+  border-radius: 26px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.transport__thumb {
+  display: flex;
+}
+.transport__option {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: rgba(24, 25, 26, 0.6);
+}
+.transport__filter__thumb {
+  border-bottom: 1px solid #32a7ed;
+}
+.transport__filter {
+  margin-bottom: 11px;
+}
+
+.transport__filter__btn {
+  width: 124px;
+  height: 22px;
+  border: 1px solid #32a7ed;
+  border-radius: 15.5px;
+  background-color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.transport__filter__results {
+  border: none;
+  width: 124px;
+  height: 22px;
+
+  border-radius: 15.5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  background: rgba(50, 167, 237, 0.2);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #32a7ed;
+  margin-right: 10px;
+}
+
+.transport__filter__price {
+  width: 68px;
+  height: 22px;
+  border: 1px solid #32a7ed;
+  border-radius: 15.5px;
+  background-color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.main__direction__bg {
+  background-image: url(../../images/main__direction.svg);
+  background-repeat: no-repeat;
+  width: 522px;
+  backdrop-filter: blur(5px);
+}
+.directions__transport {
+  margin-left: -7px;
+}
+.all__transport {
+  margin-right: 2px;
+}
+.directions__thumb {
+  display: flex;
+  padding-top: 1px;
+}
+.highlighted__direction {
+  padding-top: 5px;
+  padding-left: 30px;
+}
+.search {
+  display: flex;
+  flex-direction: column;
+  margin-left: 64px;
+}
+.search__dates {
+  display: flex;
+  flex-direction: row;
+  margin-left: 64px;
+}
+.search__from {
+  position: relative;
+  margin-bottom: 28px;
+}
+.search__date {
+  margin-right: 50px;
+  position: relative;
+}
+.transport__option {
+  position: relative;
+  margin-bottom: 6px;
+}
+.radiobuttons__options {
+  margin-left: 20px;
+}
+.radiobuttons {
+  margin-left: 35px;
+}
+.radio__route__input {
+  position: absolute;
+  top: 15%;
+  left: -10%;
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  border: 0.8px solid #32a7ed;
+}
+.radio__route {
+  position: absolute;
+  top: 15%;
+  left: -17%;
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  border: 0.8px solid #32a7ed;
+}
+.transport__thumb {
+  margin-left: 64px;
+}
+.transport__filter__thumb {
+  padding-left: 20px;
+}
+.transport__filter {
+  margin-top: 0;
+}
+.transport__filter__btn {
+  width: 124px;
+  height: 22px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.transport__filter__btn:not(:last-child) {
+  margin-right: 10px;
+}
+.travels__filter__btn {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-bottom: 15px;
+  margin-right: 12px;
+  margin-left: 20px;
+}
+.transport__price__btn {
+  margin-top: 15px;
+  background: rgba(50, 167, 237, 0.2);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #32a7ed;
+  width: 124px;
+  height: 22px;
+  border: none;
+  border-radius: 15.5px;
+  margin-right: 196px;
+}
+.transport__price__button {
+  margin-top: 15px;
+  background: rgba(50, 167, 237, 0.2);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #32a7ed;
+  width: 124px;
+  height: 22px;
+  border-radius: 15.5px;
+  margin-right: 50px;
+  border: none;
+}
+.price__btn {
+  margin-right: 10px;
+}
+.transport__filter__price {
+  margin-top: 15px;
+}
+.travel__options__images {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  width: 470px;
+  padding-bottom: 5px;
+}
+.routes {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 14px;
+}
+.route {
+  margin-right: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 14px;
+}
+.link__icon {
+  height: 0.6em;
+  width: 1em;
+}
+.notification {
+  display: flex;
+  align-items: center;
+  width: 470px;
+  height: 37px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 7px;
+  margin-bottom: 28px;
+}
+.notification__image {
+  margin-right: 12px;
+  padding-left: 11px;
+}
+.download__btn {
+  font-family: 'Montserrat';
+  margin-right: 132px;
+  width: 169px;
+  height: 31px;
+  background: linear-gradient(89.87deg, #e27582 0.1%, #eaa07b 99.88%);
+  border-radius: 15.5px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+  border: #ffffff;
+}
+.search__btn {
+  font-family: 'Montserrat';
+  width: 169px;
+  height: 31px;
+  background: linear-gradient(89.87deg, #3aadec 0.1%, #62d1e4 99.88%);
+  border-radius: 15.5px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+  border: #ffffff;
+}
+.input__wrapper {
+  position: relative;
+}
+.input__icon {
+  position: absolute;
+  top: 6px;
+  margin-left: 10px;
+  z-index: 2;
+}
+.input__date {
+  padding-left: 35px;
+  width: 150px;
+}
+.input__date__icon {
+  position: absolute;
+  top: 6px;
+  margin-left: 10px;
+  z-index: 2;
+}
+.add {
+  position: absolute;
+  left: -7%;
+  top: -50%;
+}
+.arrows__direction {
+  position: absolute;
+  left: 93%;
+  top: -50%;
+}
+.ticket__buttons {
+  margin-bottom: 17px;
+}
+.button__icon {
+  vertical-align: text-top;
+}
+.button__text {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.transport__recommend {
+  margin-top: 15px;
+  background: rgba(241, 179, 28, 0.3);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  width: 124px;
+  height: 22px;
+  border: 1px solid #32a7ed;
+  border-radius: 15.5px;
+  margin-right: 10px;
+  color: #f1b31c;
+  border: none;
+}

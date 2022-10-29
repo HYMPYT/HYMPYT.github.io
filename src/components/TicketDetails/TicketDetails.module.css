@@ -1,0 +1,145 @@
+.hero {
+    position: relative;
+    margin: 0 auto;
+    background-image: linear-gradient(
+        rgba(1, 33, 105, 0.3),
+        rgba(255, 255, 255, 0.9)
+      ),
+      url(../../images/Platz.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 78px;
+  }
+  .ticket__options {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 128px;
+    left: 595px;
+  }
+  .option {
+    margin-right: -6px;
+    width: 116px;
+    height: 47px;
+    background-image: url(../../images/settings_bg.svg);
+  }
+  .option__icon {
+    position: absolute;
+    top: 7px;
+    left: 41px;
+  }
+  .option__transport {
+    margin-right: -8px;
+    width: 116px;
+    height: 47px;
+    background-image: url(../../images/transport_bg.svg);
+  }
+  .option__icon__transport {
+    position: absolute;
+    left: 147px;
+    top: 5px;
+  }
+  .option__notification {
+    width: 116px;
+    height: 47px;
+    background-image: url(../../images/bell_bg.svg);
+  }
+  .option__icon__bell {
+    position: absolute;
+    left: 257px;
+    top: 10px;
+  }
+  .details__thumb {
+    display: flex;
+    width: 450px;
+    height: 518px;
+    position: absolute;
+    top: 190px;
+    left: 442px;
+    background: #ffffff;
+    border-radius: 20px 0px 20px 20px;
+    padding-left: 29px;
+  }
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3db0ed;
+  }
+  .label {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #3cafed;
+    margin-right: 100px;
+    padding-left: 8px;
+    padding-bottom: 3px;
+  }
+  .input {
+    background: #ffffff;
+    border: 1px solid #32a7ed;
+    border-radius: 26px;
+    width: 345px;
+    height: 37px;
+    padding-left: 15px;
+  }
+  .logout {
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .button {
+    width: 187px;
+    height: 31px;
+    color: #fff;
+    background: linear-gradient(89.87deg, #3aadec 0.1%, #62d1e4 99.88%);
+    border: none;
+    border-radius: 15.5px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .button__pink {
+    width: 187px;
+    height: 31px;
+    color: #fff;
+    background: linear-gradient(89.87deg, #e27582 0.1%, #eaa07b 99.88%);
+    border: none;
+    border-radius: 15.5px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .limits {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #727272;
+    padding-left: 12px;
+    padding-right: 156px;
+  }
+  .icon_edit {
+    position: absolute;
+    margin-left: 7px;
+    margin-top: 3px;
+  }
+  .icon_edit__password {
+    position: absolute;
+    margin-left: -90px;
+  }
+  .button_icon {
+    vertical-align: text-bottom;
+    margin-right: 10px;
+  }
+  .button__text {
+    vertical-align: text-top;
+  }
+  

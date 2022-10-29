@@ -1,0 +1,103 @@
+.hero {
+    position: relative;
+    margin: 0 auto;
+    background-image: linear-gradient(
+        180deg,
+        rgba(1, 33, 105, 0.3) 0%,
+        rgba(255, 255, 255, 0.9) 74.77%
+      ),
+      url(../../images/options_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 150px;
+  }
+  .ticket__options {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 128px;
+    left: 704px;
+  }
+  .option {
+    margin-right: -7px;
+    width: 116px;
+    height: 47px;
+    background-image: url(../../images/settingsW_bg.svg);
+  }
+  .option__icon {
+    position: absolute;
+    top: 7px;
+    left: 41px;
+  }
+  .option__transport {
+    margin-right: -7px;
+    width: 116px;
+    height: 47px;
+    background-image: url(../../images/transportB_bg.svg);
+  }
+  .option__icon__transport {
+    position: absolute;
+    left: 147px;
+    top: 5px;
+  }
+  .option__notification {
+    width: 116px;
+    height: 47px;
+    background-image: url(../../images/bellW_bg.svg);
+  }
+  .option__icon__bell {
+    position: absolute;
+    left: 257px;
+    top: 10px;
+  }
+  .details__thumb {
+    justify-content: space-between;
+    width: 560px;
+    height: 600px;
+    position: absolute;
+    top: 190px;
+    left: 442px;
+    background: #ffffff;
+    border-radius: 20px 0px 20px 20px;
+    padding-left: 29px;
+  }
+  
+  .travel {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3db1ec;
+    width: 530px;
+    border-bottom: 2px solid #808080;
+    padding-bottom: 28px;
+    margin-top: 27px;
+  }
+  
+  .icon_printer {
+    margin-right: 25px;
+    margin-left: 320px;
+  }
+  .button__pink {
+    margin-top: 30px;
+    margin-bottom: 33px;
+    width: 187px;
+    height: 31px;
+    color: #fff;
+    background: linear-gradient(89.87deg, #e27582 0.1%, #eaa07b 99.88%);
+    border: none;
+    border-radius: 15.5px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .button_icon {
+    vertical-align: text-bottom;
+    margin-right: 10px;
+  }
+  .button__text {
+    vertical-align: text-top;
+  }
+  

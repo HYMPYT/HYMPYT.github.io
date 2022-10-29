@@ -1,0 +1,145 @@
+.order {
+  padding-left: 70px;
+}
+.qr__background {
+  position: relative;
+  background-image: url(../../images/join.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+  padding-top: 57px;
+}
+
+.download__app {
+  font-family: 'Forum';
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 71px;
+  color: #fff;
+  padding-top: 17px;
+}
+.app__order {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+}
+
+.order {
+  height: 355px;
+  background: linear-gradient(
+      268.85deg,
+      rgba(21, 31, 32, 0.3) 0%,
+      rgba(55, 96, 121, 0.3) 103.48%
+    ),
+    url(../../images/background-app.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+  padding-right: 112px;
+  margin-bottom: 105px;
+}
+.order__message {
+  padding-top: 19px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  padding-bottom: 19px;
+}
+.input__wrapper {
+  position: relative;
+  margin-bottom: 37px;
+}
+.phone__input {
+  padding-left: 42px;
+  width: 222px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #32a7ed;
+  border-radius: 26px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+
+  margin-right: 19px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(0, 0, 0, 0.38);
+}
+.input__icon {
+  position: absolute;
+  top: 11px;
+  margin-left: 12px;
+  z-index: 2;
+}
+.send__button {
+  width: 133px;
+  height: 36px;
+  background: linear-gradient(89.87deg, #e37683 0.1%, #e9a383 99.88%);
+  border-radius: 26px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  border: 1px #fff;
+}
+.corona__thumb {
+  margin-bottom: 127px;
+}
+
+.qr__image {
+  background: linear-gradient(
+    268.85deg,
+    rgba(21, 31, 32, 0.3) 0%,
+    rgba(55, 96, 121, 0.3) 103.48%
+  );
+  border-radius: 10px;
+}
+.store {
+  margin-right: 22px;
+}
+.qr {
+  position: absolute;
+  top: 157px;
+  left: 670px;
+}
+.corona__thumb {
+  position: relative;
+}
+.corona__btn__thumb {
+  display: flex;
+  justify-content: center;
+}
+.corona__button {
+  margin-left: 0 auto;
+  width: 332px;
+  height: 52px;
+  background: linear-gradient(90deg, #3db0ec 0%, #61d0e5 100%);
+  border: 1px solid #ffffff;
+  border-radius: 26px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
+.corona__medium {
+  position: absolute;
+  top: 0%;
+  right: 67%;
+  fill: #3fb2ec;
+}
+.corona__big {
+  position: absolute;
+  top: 40%;
+  right: 30%;
+  fill: #3fb2ec;
+}
+.corona__small {
+  position: absolute;
+  bottom: 100%;
+  right: 65%;
+  fill: #3fb2ec;
+}

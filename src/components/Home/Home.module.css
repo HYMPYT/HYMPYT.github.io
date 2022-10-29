@@ -1,0 +1,134 @@
+.hero {
+  position: relative;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      rgba(1, 33, 105, 0.3),
+      rgba(1, 33, 105, 0.3)
+    ),
+    url(../../images/image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  height: 807px;
+  margin-bottom: 52px;
+}
+
+.ticket {
+  width: 1240px;
+  position: absolute;
+  top: 371px;
+  left: 130px;
+  background: linear-gradient(
+    rgba(204, 247, 251, 0.7) 0%,
+    rgba(161, 220, 255, 0.7) 103.48%
+  );
+  border-radius: 30px 0px 30px 30px;
+  padding: 31px 28px 57px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: content-box;
+}
+
+.ticket__button {
+  border: 1px #fff;
+  width: 127px;
+  height: 37px;
+  background: linear-gradient(89.87deg, #e27582 0.1%, #e9a383 99.88%);
+  border-radius: 26px;
+  cursor: pointer;
+}
+
+.ticket__input__place {
+  font-family: 'Montserrat';
+  padding-left: 35px;
+  background: #fff;
+  border: 1px solid #32a7ed;
+  border-radius: 26px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  width: 216px;
+  height: 37px;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.ticket__input {
+  background: #fff;
+  border: 1px solid #32a7ed;
+  border-radius: 26px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  width: 103px;
+  height: 37px;
+  margin-right: 12px;
+  padding-left: 40px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.direction__images {
+  display: flex;
+  position: absolute;
+
+  top: 310px;
+  left: 673px;
+}
+
+.all__directions {
+  /* margin-right: -0.3%; */
+}
+.direction {
+  margin-left: -0.98%;
+}
+.direction__change {
+  margin-right: 15px;
+}
+.route__hard {
+  position: relative;
+  padding-left: 45px;
+  margin-top: 9px;
+}
+.radio__route {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  border: 0.8px solid #32a7ed;
+  border-radius: 26px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.radio__route__label {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+}
+.input__wrapper {
+  position: relative;
+}
+.input__icon {
+  position: absolute;
+  top: 6px;
+  margin-left: 25px;
+  z-index: 2;
+}
+.input__date__icon {
+  position: absolute;
+  top: 6px;
+  margin-left: 10px;
+  z-index: 2;
+}
+.change__icon {
+  margin-top: 8px;
+}
+.radio__route__label {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: rgba(24, 25, 26, 0.6);
+}

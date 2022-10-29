@@ -1,0 +1,195 @@
+.hero {
+    position: relative;
+    margin: 0 auto;
+    background-image: linear-gradient(
+        180deg,
+        rgba(1, 33, 105, 0.3) 0%,
+        rgba(255, 255, 255, 0.9) 74.77%
+      ),
+      url(../../images/notifications.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 250px;
+  }
+  .ticket {
+    width: 560px;
+    height: 1068px;
+  }
+  .ticket__options {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 128px;
+    left: 704px;
+  }
+  .option {
+    margin-right: -7px;
+    width: 116px;
+    height: 47px;
+    background-image: url(../../images/settingsW_bg.svg);
+  }
+  .option__icon {
+    position: absolute;
+    top: 7px;
+    left: 41px;
+  }
+  
+  .option__icon__transport {
+    position: absolute;
+    left: 147px;
+    top: 5px;
+  }
+  .option__notification {
+    width: 116px;
+    height: 47px;
+    background-image: url(../../images/bell_blue_bg.svg);
+  }
+  .option__icon__bell {
+    position: absolute;
+    left: 257px;
+    top: 10px;
+  }
+  .option__transport {
+    margin-right: -8px;
+    width: 116px;
+    height: 47px;
+    background-image: url(../../images/transport_bg.svg);
+  }
+  .option__icon__transport {
+    position: absolute;
+    left: 147px;
+    top: 5px;
+  }
+  .notifications__thumb {
+    position: absolute;
+    top: 190px;
+    left: 471px;
+    width: 560px;
+    height: 672px;
+    background: #ffffff;
+    border-radius: 20px 0px 20px 20px;
+  }
+  .notifications__title {
+    margin-top: 28px;
+    margin-left: 28px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3db1ec;
+  }
+  .notification__prices {
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(
+        rgba(1, 33, 105, 0.3),
+        rgba(1, 33, 105, 0.3)
+      ),
+      url(../../images/stambul.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 157px;
+    margin: 0 auto;
+    border-radius: 15.5px;
+    margin-bottom: 12px;
+  }
+  .notification__destination {
+    margin-top: 19px;
+    margin-left: 21px;
+    margin-right: 210px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+  .notification__price {
+    margin-top: 19px;
+    width: 72px;
+    height: 18px;
+    padding-top: 4px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+    border: 2px solid #ffffff;
+    border-radius: 15.5px;
+    text-align: center;
+  }
+  .button__icon {
+    vertical-align: text-top;
+  }
+  .button__text {
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  .save__btn {
+    position: absolute;
+    top: 105px;
+    right: 12px;
+    font-family: 'Montserrat';
+    width: 190px;
+    height: 31px;
+    background: linear-gradient(89.87deg, #3aadec 0.1%, #62d1e4 99.88%);
+    border-radius: 15.5px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+  }
+  .notification__prices__second {
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(
+        rgba(1, 33, 105, 0.5),
+        rgba(1, 33, 105, 0.5)
+      ),
+      url(../../images/usa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 157px;
+    margin: 0 auto;
+    border-radius: 15.5px;
+    margin-bottom: 12px;
+  }
+  .notification__prices__third {
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(
+        rgba(1, 33, 105, 0.3),
+        rgba(1, 33, 105, 0.3)
+      ),
+      url(../../images/israel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 157px;
+    margin: 0 auto;
+    border-radius: 15.5px;
+    margin-bottom: 12px;
+  }
+  .button__search {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 187px;
+    height: 31px;
+    color: #fff;
+    background: linear-gradient(89.87deg, #e27582 0.1%, #eaa07b 99.88%);
+    border: none;
+    border-radius: 15.5px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .search__text {
+    margin-left: 7px;
+    vertical-align: super;
+  }
+  
