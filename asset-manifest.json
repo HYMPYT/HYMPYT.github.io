@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/triplanner/static/css/main.59c2079c.css",
-    "main.js": "/triplanner/static/js/main.aaf36ebd.js",
+    "main.css": "/triplanner/static/css/main.6a4c764e.css",
+    "main.js": "/triplanner/static/js/main.4d08f9c4.js",
     "static/media/image7.jpg": "/triplanner/static/media/image7.764f0410af0936a22f12.jpg",
     "static/media/LA.jpg": "/triplanner/static/media/LA.913aaee68a3bcfda8422.jpg",
     "static/media/image4.jpg": "/triplanner/static/media/image4.8524eceae9103602aee1.jpg",
@@ -39,17 +39,17 @@
     "static/media/date.svg": "/triplanner/static/media/date.41db0a65b65b6ad28116c4cf4828f616.svg",
     "static/media/bell.svg": "/triplanner/static/media/bell.21f4f0e36d04d36a132557c204e0628c.svg",
     "static/media/bell_white.svg": "/triplanner/static/media/bell_white.21f4f0e36d04d36a132557c204e0628c.svg",
-    "index.html": "/triplanner/index.html",
     "static/media/main__direction.svg": "/triplanner/static/media/main__direction.37acde7cdd26dc68ec74.svg",
     "static/media/bell_blue_bg.svg": "/triplanner/static/media/bell_blue_bg.3bba68fb56725049809d.svg",
     "static/media/settings_bg.svg": "/triplanner/static/media/settings_bg.e59d53e95549a7138f71.svg",
     "static/media/transportB_bg.svg": "/triplanner/static/media/transportB_bg.741d5154d0ffa8336ea8.svg",
     "static/media/pink.svg": "/triplanner/static/media/pink.21289bdc218f8c650cae253a1183f5db.svg",
-    "main.59c2079c.css.map": "/triplanner/static/css/main.59c2079c.css.map",
-    "main.aaf36ebd.js.map": "/triplanner/static/js/main.aaf36ebd.js.map"
+    "index.html": "/triplanner/index.html",
+    "main.6a4c764e.css.map": "/triplanner/static/css/main.6a4c764e.css.map",
+    "main.4d08f9c4.js.map": "/triplanner/static/js/main.4d08f9c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.59c2079c.css",
-    "static/js/main.aaf36ebd.js"
+    "static/css/main.6a4c764e.css",
+    "static/js/main.4d08f9c4.js"
   ]
 }
