@@ -1,7 +1,9 @@
 import css from './Navigation.module.css';
 import sprite from '../../images/sprite.svg';
+import { Link, useLocation } from 'react-router-dom';
 
 export function Navigation() {
+  const location = useLocation();
   return (
     <>
       <nav>
@@ -56,6 +58,8 @@ export function Navigation() {
                 <use href={sprite + '#icon-arrow-black'}></use>
               </svg>
             </li>
+            <Link to={`/cabinet/settings`} state={{ from: location }} >
+                  
             <button type="button" className={css.button__login}>
               <svg
                 width="20px"
@@ -67,6 +71,7 @@ export function Navigation() {
               </svg>
               <span className={css.login__text}>Увійти</span>
             </button>
+            </Link>
           </ul>
         </div>
       </nav>

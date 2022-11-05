@@ -24,7 +24,7 @@ export function TicketDetails() {
                                     className={css.option__icon}
                                 />
                             </li>
-                            <Link to={`/tickets/ticketId/options`} state={{ from: location }}>
+                            <Link to={`/cabinet/options`} state={{ from: location }}>
                                 <li className={css.option__transport}>
                                     <img
                                         src={transport}
@@ -36,7 +36,7 @@ export function TicketDetails() {
                                 </li>
                             </Link>
                             <Link
-                                to={`/tickets/ticketId/notifications`}
+                                to={`/cabinet/notifications`}
                                 state={{ from: location }}
                             >
                                 <li className={css.option__notification}>

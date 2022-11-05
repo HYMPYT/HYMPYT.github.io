@@ -1,0 +1,14 @@
+.data__input {
+    background: #fff;
+    border: 1px solid #32a7ed;
+    border-radius: 26px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    width: 103px;
+    height: 37px;
+    margin-right: 12px;
+    padding-left: 40px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}

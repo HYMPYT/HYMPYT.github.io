@@ -16,7 +16,7 @@ export function Notifications() {
                     <div>
                         <ul className={css.ticket__options}>
                             <Link
-                                to={`/tickets/ticketId/settings`}
+                                to={`/cabinet/settings`}
                                 state={{ from: location }}
                             >
                                 <li className={css.option}>
@@ -29,7 +29,7 @@ export function Notifications() {
                                     />
                                 </li>
                             </Link>
-                            <Link to={`/tickets/ticketId/options`} state={{ from: location }}>
+                            <Link to={`/cabinet/options`} state={{ from: location }}>
                                 <li className={css.option__transport}>
                                     <img
                                         src={transport}

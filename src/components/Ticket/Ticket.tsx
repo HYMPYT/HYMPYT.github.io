@@ -5,13 +5,14 @@ import date from '../../images/date.svg';
 import pink from '../../images/pink.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { Header } from '../Header/Header';
+import { Navigation } from '../Navigation/Navigation';
+import logo from '../../images/search_logo.svg';
 
 export function Ticket() {
     const location = useLocation();
     return (
         <>
             <div className={css.ticket__header}>
-                < Header/>
                 <div className={css.ticket__container}>
                     <div className={css.ticket}>
                         <div className={css.main__direction__bg}>
@@ -382,22 +383,17 @@ export function Ticket() {
                                         <span className={css.button__text}>Завантажити PDF</span>
                                     </button>
 
-                                    <Link
-                                        to={`/tickets/ticketId/settings`}
-                                        state={{ from: location }}
-                                    >
-                                        <button type="button" className={css.search__btn}>
-                                            <svg
-                                                width="16px"
-                                                height="16px"
-                                                aria-label=""
-                                                className={css.button__icon}
-                                            >
-                                                <use href={sprite + '#icon-search'}></use>
-                                            </svg>
-                                            <span className={css.button__text}> Відкрити деталі</span>
-                                        </button>
-                                    </Link>
+                                    <button type="button" className={css.search__btn}>
+                                        <svg
+                                            width="16px"
+                                            height="16px"
+                                            aria-label=""
+                                            className={css.button__icon}
+                                        >
+                                            <use href={sprite + '#icon-search'}></use>
+                                        </svg>
+                                        <span className={css.button__text}> Відкрити деталі</span>
+                                    </button>
                                 </div>
                             </ul>
                         </div>
@@ -573,22 +569,17 @@ export function Ticket() {
                                         <span className={css.button__text}>Завантажити PDF</span>
                                     </button>
 
-                                    <Link
-                                        to={`/tickets/ticketId/settings`}
-                                        state={{ from: location }}
-                                    >
-                                        <button type="button" className={css.search__btn}>
-                                            <svg
-                                                width="16px"
-                                                height="16px"
-                                                aria-label=""
-                                                className={css.button__icon}
-                                            >
-                                                <use href={sprite + '#icon-search'}></use>
-                                            </svg>
-                                            <span className={css.button__text}> Відкрити деталі</span>
-                                        </button>
-                                    </Link>
+                                    <button type="button" className={css.search__btn}>
+                                        <svg
+                                            width="16px"
+                                            height="16px"
+                                            aria-label=""
+                                            className={css.button__icon}
+                                        >
+                                            <use href={sprite + '#icon-search'}></use>
+                                        </svg>
+                                        <span className={css.button__text}> Відкрити деталі</span>
+                                    </button>
                                 </div>
                             </ul>
                         </div>
@@ -753,27 +744,36 @@ export function Ticket() {
                                         </svg>
                                         <span className={css.button__text}>Завантажити PDF</span>
                                     </button>
-                                    <Link
-                                        to={`/tickets/ticketId/settings`}
-                                        state={{ from: location }}
-                                    >
-                                        <button type="button" className={css.search__btn}>
-                                            <svg
-                                                width="16px"
-                                                height="16px"
-                                                aria-label=""
-                                                className={css.button__icon}
-                                            >
-                                                <use href={sprite + '#icon-search'}></use>
-                                            </svg>
-                                            <span className={css.button__text}> Відкрити деталі</span>
-                                        </button>
-                                    </Link>
+
+                                    <button type="button" className={css.search__btn}>
+                                        <svg
+                                            width="16px"
+                                            height="16px"
+                                            aria-label=""
+                                            className={css.button__icon}
+                                        >
+                                            <use href={sprite + '#icon-search'}></use>
+                                        </svg>
+                                        <span className={css.button__text}> Відкрити деталі</span>
+                                    </button>
                                 </div>
                             </ul>
                         </div>
                     </div>
                 </div>
+                <div className={css.navigation}>
+                    <Link to={`/`} state={{ from: location }} >
+                        <img
+                            src={logo}
+                            alt=""
+                            className={css.logo}
+                            width="126px"
+                            height="30px"
+                        />
+                    </Link>
+                    <Navigation />
+                </div>
+
             </div>
         </>
     );

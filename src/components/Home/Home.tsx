@@ -7,12 +7,65 @@ import people from '../../images/people.svg';
 import { Header } from '../Header/Header';
 import { Destinations } from '../Destinations/Destinations';
 import { JoinUs } from '../JoinUs/JoinUs';
+import { CustomDatePicker } from '../CustomDatePicker/CustomDatePicker';
+import { useEffect, useState } from 'react';
+import { useGetCitiesQuery, useLazyGetTicketsQuery } from '../../store/triplanner/triplanner.api';
+import { useCitySuggest } from '../../hooks/debounce';
+
+const datePickerInputs = [
+  {
+    placeholder: new Date().toDateString(),
+    date: new Date()
+  },
+  {
+    placeholder: "Назад",
+    date: null
+  }
+]
 
 export function Home() {
+
+  const [fromSearch, setFromSearch] = useState('')
+  const [toSearch, setToSearch] = useState('')
+
+  const [dropdownFrom, setDropdownFrom] = useState(false)
+  const [dropdownTo, setDropdownTo] = useState(false)
+
+  const [fromCitySuggest, toCitySuggest] = useCitySuggest(fromSearch, toSearch)
+
+  const fromData = useGetCitiesQuery(fromCitySuggest, {
+    skip: fromCitySuggest.length < 1,
+    refetchOnFocus: true
+  }).data
+
+  const toData = useGetCitiesQuery(toCitySuggest, {
+    skip: toCitySuggest.length < 1,
+    refetchOnFocus: true
+  }).data
+
+  useEffect(() => {
+    setDropdownFrom(fromCitySuggest.length > 0 && fromData?.length! > 0 && fromData?.findIndex((c) => c.name === fromSearch) === -1)
+  }, [fromCitySuggest, fromData, fromSearch])
+
+  useEffect(() => {
+    setDropdownTo(toCitySuggest.length > 0 && toData?.length! > 0 && toData?.findIndex((c) => c.name === toSearch) === -1)
+  }, [toCitySuggest, toData, toSearch])
+
+  const clickHandlerFrom = (cityName: string) => {
+    setFromSearch(cityName)
+    setDropdownFrom(false)
+  }
+
+  const clickHandlerTo = (cityName: string) => {
+    setToSearch(cityName)
+    setDropdownTo(false)
+  }
+
   const location = useLocation();
+
   return (
     <>
-      <section className={css.hero}>
+      <div className={css.hero}>
         <Header />
         <div>
           <div className={css.ticket__thumb}>
@@ -107,11 +160,20 @@ export function Home() {
                   />
                   <input
                     type="text"
-                    autoComplete="off"
-                    autoFocus
                     placeholder="Чернівці, Україна"
                     className={css.ticket__input__place}
+                    value={fromSearch}
+                    onChange={e => setFromSearch(e.target.value)}
                   />
+                  {dropdownFrom && <ul className={css.dropdown__list}>
+                    {fromData?.map(city => (
+                      <li
+                        key={city.id}
+                        onClick={() => clickHandlerFrom(city.name)}
+                        className={css.dropdown__list__item}
+                      >{city.name}</li>
+                    ))}
+                  </ul>}
                 </div>
                 <li>
                   <svg
@@ -134,12 +196,45 @@ export function Home() {
                   <label>
                     <input
                       type="text"
-                      autoComplete="off"
-                      autoFocus
                       placeholder="Країна, місто, населений пункт"
                       className={css.ticket__input__place}
+                      value={toSearch}
+                      onChange={e => setToSearch(e.target.value)}
                     />
                   </label>
+                  {dropdownTo && <ul className={css.dropdown__list}>
+                    {toData?.map(city => (
+                      <li
+                        key={city.id}
+                        onClick={() => clickHandlerTo(city.name)}
+                        className={css.dropdown__list__item}
+                      >{city.name}</li>
+                    ))}
+                  </ul>}
+                </div>
+                {
+                  datePickerInputs.map(datePicker => (
+                    <div key={datePicker.placeholder} className={css.input__wrapper}>
+                      <img
+                        src={date}
+                        alt=""
+                        width="22px"
+                        height="24px"
+                        className={css.input__date__icon}
+                      />
+                      <CustomDatePicker placeholder={datePicker.placeholder} date={datePicker.date} />
+                    </div>
+                  ))
+                }
+                {/* <div className={css.input__wrapper}>
+                  <img
+                    src={date}
+                    alt=""
+                    width="22px"
+                    height="24px"
+                    className={css.input__date__icon}
+                  />
+                  <CustomDatePicker placeholder={new Date().toDateString()} />
                 </div>
                 <div className={css.input__wrapper}>
                   <img
@@ -149,30 +244,8 @@ export function Home() {
                     height="24px"
                     className={css.input__date__icon}
                   />
-                  <input
-                    type="text"
-                    autoComplete="off"
-                    autoFocus
-                    placeholder="01.09.2022"
-                    className={css.ticket__input}
-                  />
-                </div>
-                <div className={css.input__wrapper}>
-                  <img
-                    src={date}
-                    alt=""
-                    width="22px"
-                    height="24px"
-                    className={css.input__date__icon}
-                  />
-                  <input
-                    type="text"
-                    autoComplete="off"
-                    autoFocus
-                    placeholder="Назад"
-                    className={css.ticket__input}
-                  />
-                </div>{' '}
+                  <CustomDatePicker placeholder="Назад" useSecondState={true} disable={true} />
+                </div> */}
                 <div className={css.input__wrapper}>
                   <img
                     src={people}
@@ -190,8 +263,8 @@ export function Home() {
                   />
                 </div>
                 <li className={css.ticket__search}>
-                  <Link to={`/tickets/ticketId`} state={{ from: location }}>
-                    <button className={css.ticket__button} type="submit">
+                  <Link to={`/tickets/ticketId`} state={{ from: location }} >
+                    <button className={css.ticket__button} type="submit" >
                       <svg width="22px" height="25px" aria-label="Пошук">
                         <use href={sprite + '#icon-search'}></use>
                       </svg>
@@ -212,7 +285,7 @@ export function Home() {
             </ul>
           </div>
         </div>
-      </section>
+      </div >
       <Destinations />
       <JoinUs />
       {/* <Footer /> */}

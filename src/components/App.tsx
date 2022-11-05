@@ -20,13 +20,10 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="tickets/:ticketId/" element={<Ticket />} />
-        <Route path="tickets/:ticketId/settings" element={<TicketDetails />} />
-        <Route path="tickets/:ticketId/options" element={<TravelOptions />} />
-        <Route path="tickets/:ticketId/options/trip" element={<Trip />} />
-        <Route
-          path="tickets/:ticketId/notifications"
-          element={<Notifications />}
-        />
+        <Route path="cabinet/settings" element={<TicketDetails />} />
+        <Route path="cabinet/options" element={<TravelOptions />} />
+        <Route path="cabinet/options/trip" element={<Trip />} />
+        <Route path="cabinet/notifications" element={<Notifications />} />
 
         <Route path='agreement' element={<Agreement />} />
         <Route path='contacts' element={<Contacts />} />

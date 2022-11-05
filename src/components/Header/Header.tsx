@@ -1,18 +1,23 @@
+import { Link, useLocation } from 'react-router-dom';
 import css from './Header.module.css';
 import sprite from '../../images/sprite.svg';
 
 export function Header() {
+  const location = useLocation();
   return (
     <>
       <div className={css.header}>
-        <svg
-          width="126px"
-          height="30px"
-          aria-label="Логотип сервісу"
-          className={css.logo}
-        >
-          <use href={sprite + '#icon-logo'}></use>
-        </svg>
+        <Link to={`/`} state={{ from: location }} >
+          <svg
+            width="126px"
+            height="30px"
+            aria-label="Логотип сервісу"
+            className={css.logo}
+          >
+            <use href={sprite + '#icon-logo'}></use>
+          </svg>
+        </Link>
+
 
         <ul className={css.header__features}>
           <li className={css.header__feature}>
@@ -65,6 +70,7 @@ export function Header() {
             </svg>
           </li>
           <li>
+          <Link to={`/cabinet/settings`} state={{ from: location }} >
             <button type="button" className={css.button__login}>
               <svg
                 width="20px"
@@ -76,6 +82,7 @@ export function Header() {
               </svg>
               <span className={css.login__text}>Увійти</span>
             </button>
+            </Link>
           </li>
         </ul>
       </div>

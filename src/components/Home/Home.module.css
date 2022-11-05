@@ -1,10 +1,8 @@
 .hero {
   position: relative;
   margin: 0 auto;
-  background-image: linear-gradient(
-      rgba(1, 33, 105, 0.3),
-      rgba(1, 33, 105, 0.3)
-    ),
+  background-image: linear-gradient(rgba(1, 33, 105, 0.3),
+      rgba(1, 33, 105, 0.3)),
     url(../../images/image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,10 +16,8 @@
   position: absolute;
   top: 371px;
   left: 130px;
-  background: linear-gradient(
-    rgba(204, 247, 251, 0.7) 0%,
-    rgba(161, 220, 255, 0.7) 103.48%
-  );
+  background: linear-gradient(rgba(204, 247, 251, 0.7) 0%,
+      rgba(161, 220, 255, 0.7) 103.48%);
   border-radius: 30px 0px 30px 30px;
   padding: 31px 28px 57px 30px;
   display: flex;
@@ -54,6 +50,7 @@
   line-height: 12px;
   color: rgba(0, 0, 0, 0.5);
 }
+
 .ticket__input {
   background: #fff;
   border: 1px solid #32a7ed;
@@ -77,20 +74,23 @@
   left: 673px;
 }
 
-.all__directions {
-  /* margin-right: -0.3%; */
-}
+/* .all__directions {
+  margin-right: -0.3%;
+} */
 .direction {
   margin-left: -0.98%;
 }
+
 .direction__change {
   margin-right: 15px;
 }
+
 .route__hard {
   position: relative;
   padding-left: 45px;
   margin-top: 9px;
 }
+
 .radio__route {
   position: absolute;
   top: 15%;
@@ -102,33 +102,67 @@
   border-radius: 26px;
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
+
 .radio__route__label {
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
   color: #ffffff;
 }
+
 .input__wrapper {
   position: relative;
 }
+
 .input__icon {
   position: absolute;
   top: 6px;
   margin-left: 25px;
   z-index: 2;
 }
+
 .input__date__icon {
   position: absolute;
   top: 6px;
   margin-left: 10px;
   z-index: 2;
 }
+
 .change__icon {
   margin-top: 8px;
 }
+
 .radio__route__label {
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
   color: rgba(24, 25, 26, 0.6);
+}
+
+.dropdown__list {
+  list-style: none;
+  position: absolute;
+  top: 45px;
+  left: 15px;
+  right: 0px;
+  max-height: 200px;
+  max-width: 255px;
+  overflow-y: auto;
+  background-color: white;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown__list__item {
+  padding: 2px 4px;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  cursor: pointer;
+}
+
+.dropdown__list__item:hover {
+  background-color: gray;
+  font-weight: 500;
+  color: white;
 }

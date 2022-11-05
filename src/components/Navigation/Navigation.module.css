@@ -24,6 +24,7 @@
   line-height: 17px;
   color: #fff;
   border: 1px #fff;
+  cursor: pointer;
 }
 .login__text {
   vertical-align: middle;
