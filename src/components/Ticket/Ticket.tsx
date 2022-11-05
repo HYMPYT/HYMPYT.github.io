@@ -4,7 +4,6 @@ import place from '../../images/place.svg';
 import date from '../../images/date.svg';
 import pink from '../../images/pink.svg';
 import { Link, useLocation } from 'react-router-dom';
-import { Header } from '../Header/Header';
 import { Navigation } from '../Navigation/Navigation';
 import logo from '../../images/search_logo.svg';
 

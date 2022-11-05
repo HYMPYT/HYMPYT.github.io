@@ -1,7 +1,7 @@
 .ticket__header {
   display: flex;
   /* flex-direction: column; */
-  justify-content: start;
+  justify-content: flex-start;
   background-image: url("../../images/map.jpg");
   background-repeat: no-repeat;
   background-size: cover;
