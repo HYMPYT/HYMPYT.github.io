@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/triplanner/static/css/main.cf521363.css",
-    "main.js": "/triplanner/static/js/main.d3772f9f.js",
+    "main.css": "/triplanner/static/css/main.709e0ca9.css",
+    "main.js": "/triplanner/static/js/main.01f5a713.js",
     "static/media/image7.jpg": "/triplanner/static/media/image7.764f0410af0936a22f12.jpg",
     "static/media/LA.jpg": "/triplanner/static/media/LA.913aaee68a3bcfda8422.jpg",
+    "static/media/image8.jpg": "/triplanner/static/media/image8.b8f666b19f202374e1f7.jpg",
     "static/media/image4.jpg": "/triplanner/static/media/image4.8524eceae9103602aee1.jpg",
     "static/media/image5.jpg": "/triplanner/static/media/image5.8524eceae9103602aee1.jpg",
     "static/media/Platz.jpg": "/triplanner/static/media/Platz.61ec8385848782ca0148.jpg",
@@ -22,6 +23,7 @@
     "static/media/background-app.jpg": "/triplanner/static/media/background-app.40edfe83a3857554c1ad.jpg",
     "static/media/footer.jpg": "/triplanner/static/media/footer.1051c77f84577658fcbb.jpg",
     "static/media/qrCode.jpg": "/triplanner/static/media/qrCode.79196c289309c3661b49.jpg",
+    "static/media/Group639.svg": "/triplanner/static/media/Group639.3874d1bd39fdeac54667.svg",
     "static/media/flixbus.svg": "/triplanner/static/media/flixbus.8839b58312cad5daa89f4ee0e85916e9.svg",
     "static/media/Sadowa.svg": "/triplanner/static/media/Sadowa.030afdcd6047253cf4f5d489c7a15bf4.svg",
     "static/media/appStore.svg": "/triplanner/static/media/appStore.f6eabb82aed0074c570a1bb353d5cd33.svg",
@@ -47,11 +49,11 @@
     "static/media/transportB_bg.svg": "/triplanner/static/media/transportB_bg.741d5154d0ffa8336ea8.svg",
     "static/media/pink.svg": "/triplanner/static/media/pink.21289bdc218f8c650cae253a1183f5db.svg",
     "index.html": "/triplanner/index.html",
-    "main.cf521363.css.map": "/triplanner/static/css/main.cf521363.css.map",
-    "main.d3772f9f.js.map": "/triplanner/static/js/main.d3772f9f.js.map"
+    "main.709e0ca9.css.map": "/triplanner/static/css/main.709e0ca9.css.map",
+    "main.01f5a713.js.map": "/triplanner/static/js/main.01f5a713.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf521363.css",
-    "static/js/main.d3772f9f.js"
+    "static/css/main.709e0ca9.css",
+    "static/js/main.01f5a713.js"
   ]
 }
