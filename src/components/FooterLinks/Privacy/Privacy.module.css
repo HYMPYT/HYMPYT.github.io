@@ -17,10 +17,11 @@
 }
 
 .privacy {
+    position: relative;
     width: 48.3vw;
-    height: 2300px;
-    margin-left: 440px;
-    margin-top: 25px;
+    height: 285vh;
+    left: 440px;
+    top: 25px;
     background: #FFFFFF;
     border-radius: 20px;
 }
@@ -28,13 +29,13 @@
 .privacy_content_top {
     position: relative;
     width: 28vw;
-    height: 130px;
-    left: 290px;
-    top: -120px;
+    height: 10vh;
+    left: 250px;
+    top: -100px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 0.59rem;
+    font-size: 0.52rem;
     line-height: 15px;
 
     color: #808080;
@@ -42,14 +43,14 @@
 
 .privacy_info {
     position: relative;
-    width: 40vw;
-    height: 70px;
+    width: 30vw;
+    height: 7vh;
     left: 65px;
     top: 35px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 1.37rem;
+    font-size: 1rem;
     line-height: 30px;
 
     background: linear-gradient(180deg, #3DB1EC 0%, #62D1E5 100%);
@@ -62,13 +63,13 @@
 .privacy_content_center {
     position: relative;
     width: 40vw;
-    height: 130px;
+    height: 13vh;
     left: 65px;
-    top: -15px;
+    top: 30px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 0.58rem;
+    font-size: 0.52rem;
     line-height: 15px;
 
     color: #808080;
@@ -76,15 +77,15 @@
 
 .privacy_content_bottom {
     position: relative;
-    width: 588px;
-    height: 34px;
+    width: 50vw;
+    height: 5vh;
     left: 65px;
-    top: -120px;
+    top: -20px;
 
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 0.7rem;
+    font-size: 0rem;
     line-height: 15px;
 
     color: #717171;
@@ -95,8 +96,8 @@
     position: relative;
     left: 80px;
     top: 25px;
-    width: 150px;
-    height: 150px;
+    width: 15vw;
+    height: 15vh;
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 157 157' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M116.347 66.8662L116.337 66.8688C115.587 64.5334 112.483 62.9943 107.797 62.8524C97.7664 62.5481 87.0322 63.6747 75.2606 66.7254C63.5505 69.9666 53.6912 74.3581 45.1469 79.6394C41.1593 82.1055 39.2599 84.9852 39.7685 87.3854L39.7492 87.3906L52.7108 135.764C53.3293 138.497 57.1291 140.585 64.653 140.691C72.4268 140.803 82.5565 139.507 93.9351 136.458C105.314 133.409 114.734 129.467 121.411 125.483C128.186 121.442 130.325 117.566 129.147 114.869L129.186 114.859L116.328 66.8714L116.347 66.8662ZM39.9381 88.0957L116.536 67.5714L39.9381 88.0957Z' fill='%23E2A610'/%3E%3Cpath d='M97.4646 119.072L90.3893 110.014C91.4804 109.073 92.2841 107.843 92.708 106.466C93.1319 105.089 93.1589 103.62 92.7859 102.229C91.6885 98.1331 87.478 95.7103 83.3921 96.8051C79.3062 97.8999 76.8738 102.113 77.9686 106.199C78.7062 108.952 80.8575 110.953 83.4305 111.63L82.2114 123.231C82.0567 124.701 83.4224 125.857 84.8423 125.477L96.3561 122.392C97.805 122.003 98.382 120.254 97.4646 119.072Z' fill='%234E342E'/%3E%3Cpath d='M96.7948 118.236L82.3155 122.116L82.2009 123.234C82.0462 124.704 83.4119 125.86 84.8318 125.479L96.3456 122.394C97.8042 122.003 98.3812 120.254 97.4541 119.074L96.7948 118.236ZM83.5636 109.503C83.6029 108.954 83.2745 108.462 82.7666 108.267C82.0732 107.998 81.0889 107.454 80.2754 106.388C77.3192 102.542 78.9389 100.048 78.9389 100.048C78.3511 100.947 77.9599 101.959 77.7909 103.02C77.6219 104.08 77.6789 105.164 77.9581 106.201C78.6957 108.954 80.847 110.956 83.42 111.633L83.5636 109.503ZM89.1696 97.5447C89.1696 97.5447 92.4386 101.245 90.7369 104.63C90.1547 105.78 89.5816 106.462 89.1247 106.843C88.6774 107.222 88.6087 107.892 88.9873 108.34L90.3929 109.992C91.4841 109.051 92.2877 107.821 92.7116 106.444C93.1355 105.067 93.1625 103.598 92.7895 102.207C91.9291 99.0725 89.1696 97.5447 89.1696 97.5447Z' fill='%239E740B'/%3E%3Cpath d='M105.993 62.6526C96.5077 62.4507 86.3436 63.5799 75.1903 66.4649C64.0861 69.5334 54.7218 73.6472 46.6055 78.5551C38.4724 83.4779 39.3042 90.0981 52.7099 90.171C60.0604 90.2099 69.6568 88.9326 80.4366 86.0442C91.2163 83.1558 100.166 79.4637 106.512 75.7548C118.088 68.9985 115.495 62.8396 105.993 62.6526Z' fill='%23FDD835'/%3E%3Cpath d='M105.111 69.3684C105.111 69.3684 105.199 71.1256 100.514 72.3808C95.829 73.6361 94.389 72.2413 94.389 72.2413L88.682 50.9426C86.0886 41.2641 76.5925 35.3814 67.5032 37.8169C58.4138 40.2524 53.1338 50.1046 55.7246 59.7735L61.4342 81.0819C61.4342 81.0819 59.8412 83.2894 56.1321 84.2832C52.4229 85.2771 50.722 83.9522 50.722 83.9522L45.0125 62.6438C40.8352 47.0538 49.6391 31.112 64.6303 27.0951C79.6214 23.0782 95.2194 32.492 99.3941 48.0723L105.101 69.371L105.111 69.3684Z' fill='%2384B0C1' stroke='%2384B0C1' stroke-width='1.958' stroke-miterlimit='10'/%3E%3Cpath d='M55.1421 40.6746C50.9692 44.9607 50.7419 47.1646 49.6065 48.4524C48.7638 49.4029 47.2569 49.2269 47.5166 46.6416C47.7414 44.428 48.5569 40.1305 52.3511 35.9769C58.8821 28.8228 65.7443 27.2325 66.4099 31.1849C67.0145 34.6775 59.5916 36.1074 55.1421 40.6746Z' fill='%23B9E4EA'/%3E%3C/svg%3E") no-repeat;
 }
 
@@ -104,22 +105,22 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 0.56rem;
-    line-height: 12px;
-    width: 35vw;
+    font-size: 0.50rem;
+    line-height: 13px;
+    width: 35.35vw;
     color: #717171;
     position: relative;
-    top: -1580px;
+    top: -1450px;
     left: 30px;
 }
 
 .cookie{
     position: relative;
-    top: -1600px;
+    top: -1450px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 0.7rem;
+    font-size: 0.55rem;
     line-height: 15px;
     color: #717171;
 }
@@ -131,9 +132,9 @@
     font-weight: bold;
     position: relative;
     left: 0px;
-    top: -1580px;
-    width: 187px;
-    height: 31px;
+    top: -1425px;
+    width: 10vw;
+    height: 3vh;
     background: linear-gradient(89.87deg, #E27582 0.1%, #EAA07B 99.88%);
     border-radius: 15.5px;
     border: none;
@@ -143,8 +144,8 @@
 
 .common {
     position: relative;
-    width: 21px;
-    height: 1625.75px;
+    width: 1.25vw;
+    height: 193vh;
     left: 0px;
     top: 45px;
     background-repeat: no-repeat;

@@ -16,10 +16,11 @@
 }
 
 .help {
-    width: 48.3vw;
-    height: 910px;
-    margin-left: 440px;
-    margin-top: 50px;
+    position: relative;
+    width: 53vw;
+    height: 125vh;
+    left: 400px;
+    top: 50px;
 
     background: #FFFFFF;
     border-radius: 20px;
@@ -62,7 +63,7 @@
 .help_content_center {
     position: relative;
     width: 40vw;
-    height: 130px;
+    height: 15vh;
     left: 65px;
     top: 0px;
     font-family: 'Montserrat';
@@ -86,8 +87,8 @@
 
 .help_content_bottom {
     position: relative;
-    width: 588px;
-    height: 34px;
+    width: 58vw;
+    height: 34vh;
     left: 65px;
     top: 30px;
 
@@ -102,8 +103,8 @@
 
 .inner {
     position: relative;
-    width: 48.3vw;
-    height: 101px;
+    width: 53vw;
+    height: 13.5vh;
     top: -45px;
 
     background: linear-gradient(268.85deg, rgba(204, 247, 251, 0.7) 0%, rgba(162, 220, 255, 0.7) 103.48%);
@@ -136,7 +137,7 @@
     position: relative;
     border: none;
     top: 30px;
-    left: 110px;
+    left: 150px;
     width: 127px;
     height: 45px;
     background-repeat: no-repeat;
@@ -172,7 +173,7 @@
 
 .prices{
     position: relative;
-    left: 90px;
+    left: 40px;
     width: 100px;
     height: 100px;
 	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 87 87' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M84.3384 1.76149C84.086 1.13296 83.601 0.625934 82.9843 0.345876C82.3677 0.0658176 81.6667 0.034295 81.0274 0.257866C80.3881 0.481436 79.8596 0.942886 79.5518 1.54622C79.244 2.14955 79.1807 2.84831 79.375 3.49714C83.4162 15.1116 75.3948 23.7855 69.2787 28.4313L66.8079 24.8904C65.977 23.7029 64.1196 22.7154 62.6754 22.698L48.8076 22.7589C47.1135 22.8101 45.4647 23.3181 44.0356 24.2292L3.17172 52.8827C2.22123 53.5515 1.57449 54.5698 1.37311 55.7145C1.17173 56.8591 1.43212 58.037 2.09727 58.9901L20.6674 85.5599C22.0594 87.5391 24.2823 87.2999 26.2659 85.9166L67.1298 57.2588C68.3043 56.4279 69.6615 54.6357 70.14 53.2655L74.4813 39.5847C74.9598 38.2188 74.6683 36.1352 73.8375 34.9476L72.3324 32.79C80.5452 26.4956 89.0712 15.3726 84.3384 1.76149ZM65.3245 42.4688C64.5717 42.9957 63.7224 43.3692 62.8252 43.5678C61.928 43.7665 61.0005 43.7864 60.0956 43.6264C59.1907 43.4664 58.3262 43.1297 57.5515 42.6355C56.7768 42.1413 56.107 41.4993 55.5805 40.7462C54.5145 39.2222 54.0966 37.3375 54.4188 35.5057C54.7409 33.674 55.7767 32.0449 57.2988 30.9761C58.492 30.1401 59.9166 29.6978 61.3735 29.7111C62.8304 29.7243 64.2467 30.1925 65.4246 31.05C64.2414 31.7634 63.4279 32.181 63.2757 32.2463C62.7364 32.5034 62.3005 32.936 62.0394 33.4733C61.7782 34.0106 61.7073 34.6206 61.8382 35.2035C61.9691 35.7864 62.2942 36.3075 62.76 36.6814C63.2259 37.0554 63.8049 37.26 64.4023 37.2618C64.7764 37.2618 65.1592 37.1748 65.5203 37.0052C66.3642 36.605 67.269 36.1308 68.2129 35.5697C68.4301 36.875 68.2742 38.215 67.7632 39.4356C67.2522 40.6561 66.4068 41.7075 65.3245 42.4688Z' fill='url(%23paint0_linear_744_1225)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_744_1225' x1='43.5011' y1='0.110352' x2='43.5011' y2='86.9996' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%233EB2EC'/%3E%3Cstop offset='1' stop-color='%2361D0E6'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
@@ -180,7 +181,7 @@
 
 .searching{
     position: relative;
-    left: 90px;
+    left: 30px;
     width: 100px;
     height: 100px;
 	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 99 98' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M86.625 27.5625C86.625 23.5014 84.9953 19.6066 82.0943 16.7349C79.1934 13.8633 75.2588 12.25 71.1562 12.25H27.8437C23.7412 12.25 19.8066 13.8633 16.9057 16.7349C14.0047 19.6066 12.375 23.5014 12.375 27.5625V35.2678C16.9508 32.2333 22.3361 30.617 27.8437 30.625C34.4767 30.625 40.5652 32.9219 45.3482 36.75H80.4375V70.4375C80.4375 72.8742 79.4597 75.2111 77.7191 76.9341C75.9785 78.657 73.6178 79.625 71.1562 79.625H62.6237L65.3462 82.32C66.3547 83.3184 67.0849 84.4944 67.5366 85.75H71.1562C75.2588 85.75 79.1934 84.1367 82.0943 81.2651C84.9953 78.3934 86.625 74.4986 86.625 70.4375V27.5625ZM27.8437 30.625H18.5625V27.5625C18.5625 25.1258 19.5403 22.7889 21.2809 21.066C23.0215 19.343 25.3822 18.375 27.8437 18.375H71.1562C73.6178 18.375 75.9785 19.343 77.7191 21.066C79.4597 22.7889 80.4375 25.1258 80.4375 27.5625V30.625H27.8437ZM40.8127 75.3559C36.4279 78.6016 30.9639 80.0828 25.5203 79.5013C20.0767 78.9198 15.0577 76.3188 11.4733 72.2218C7.88894 68.1248 6.00527 62.8359 6.20141 57.4195C6.39755 52.0032 8.65895 46.8613 12.5305 43.0289C16.402 39.1965 21.5963 36.9579 27.068 36.7638C32.5396 36.5696 37.8825 38.4343 42.0213 41.9824C46.1601 45.5306 48.7876 50.499 49.375 55.8875C49.9624 61.2761 48.4662 66.685 45.1873 71.0255L60.9654 86.6443C61.5464 87.2185 61.873 87.9977 61.8736 88.8103C61.8742 89.623 61.5486 90.4026 60.9685 90.9777C60.3884 91.5527 59.6013 91.8761 58.7803 91.8767C57.9594 91.8773 57.1718 91.555 56.5909 90.9808L40.8127 75.362V75.3559ZM43.3125 58.1875C43.3125 54.1264 41.6828 50.2316 38.7818 47.3599C35.8809 44.4883 31.9463 42.875 27.8437 42.875C23.7412 42.875 19.8066 44.4883 16.9057 47.3599C14.0047 50.2316 12.375 54.1264 12.375 58.1875C12.375 62.2486 14.0047 66.1434 16.9057 69.0151C19.8066 71.8867 23.7412 73.5 27.8437 73.5C31.9463 73.5 35.8809 71.8867 38.7818 69.0151C41.6828 66.1434 43.3125 62.2486 43.3125 58.1875Z' fill='url(%23paint0_linear_744_1227)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_744_1227' x1='46.4062' y1='12.25' x2='46.4062' y2='91.8767' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%233EB2EC'/%3E%3Cstop offset='1' stop-color='%2361D0E6'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
@@ -188,33 +189,14 @@
 
 .booking{
     position: relative;
-    left: 90px;
+    top: -125px;
+    left: 600px;
     width: 100px;
     height: 100px;
 	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 127 126' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_744_1229)'%3E%3Cpath d='M31.7454 66.2452L60.4748 24.1828L77.2997 35.6746M23.8912 71.516L86.7248 29.3496L93.0497 38.7746C88.3372 41.9371 85.733 48.2413 89.4226 53.7392C93.1121 59.2371 100.987 60.7872 105.7 57.6247L112.025 67.0497L49.1911 109.216L42.8661 99.7911C47.5786 96.6286 50.1828 90.3245 45.9662 84.0411C41.7495 77.7578 34.9287 77.7786 30.2162 80.941L23.8912 71.516Z' stroke='url(%23paint0_linear_744_1229)' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M54.2051 72.5547L63.6301 66.2297M60.53 81.9797L82.5218 67.2215' stroke='url(%23paint1_linear_744_1229)' stroke-width='5' stroke-linecap='round'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_744_1229' x1='44.7664' y1='34.7244' x2='80.6078' y2='88.1329' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%233EB2EC'/%3E%3Cstop offset='1' stop-color='%2361D0E6'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_744_1229' x1='65.201' y1='65.1756' x2='71.5259' y2='74.6006' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%233EB2EC'/%3E%3Cstop offset='1' stop-color='%2361D0E6'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_744_1229'%3E%3Crect width='90.8049' height='90.8049' fill='white' transform='translate(0.742188 50.5996) rotate(-33.8648)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
 
 .adventurestext{
-    position: relative;
-    top: 10px;
-    left: 95px;
-    font-family: 'Montserrat';
-    font-weight: bold;
-    font-size: x-small;
-    color: black;
-}
-
-.pricestext{
-    position: relative;
-    top: 10px;
-    left: 120px;
-    font-family: 'Montserrat';
-    font-weight: bold;
-    font-size: x-small;
-    color: black;
-}
-
-.searchingtext{
     position: relative;
     top: 10px;
     left: 110px;
@@ -224,10 +206,30 @@
     color: black;
 }
 
-.bookingtext{
+.pricestext{
     position: relative;
     top: 10px;
-    left: 85px;
+    left: 80px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: x-small;
+    color: black;
+}
+
+.searchingtext{
+    position: relative;
+    top: 10px;
+    left: 60px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: x-small;
+    color: black;
+}
+
+.bookingtext{
+    position: relative;
+    top: -115px;
+    left: 620px;
     font-family: 'Montserrat';
     font-weight: bold;
     font-size: x-small;
@@ -242,7 +244,11 @@ ul.list{
 ul.list li{
     display: inline-flex;
     margin-right: 100px;
-    padding: 3px;
+    padding: 1px;
+}
+
+a{
+    text-decoration: none;
 }
 
 .buttonlink{
@@ -252,9 +258,9 @@ ul.list li{
     font-weight: bold;
     position: relative;
     left: 65px;
-    top: 50px;
-    width: 187px;
-    height: 31px;
+    top: 0px;
+    width: 10.35vw;
+    height: 3.3vh;
     background: linear-gradient(89.87deg, #E27582 0.1%, #EAA07B 99.88%);
     border-radius: 15.5px;
     border: none;

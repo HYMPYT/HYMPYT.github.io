@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Container } from '../Container/Container';
-import { Footer } from '../Footer/Footer';
+import Footer  from '../Footer/Footer';
 
 export function AppBar() {
     return (

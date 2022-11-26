@@ -1,7 +1,9 @@
 import { Header } from "../../Header/Header"
 import css from "./Partnership.module.css"
+import { Link, useLocation } from 'react-router-dom'
 
 export function Partnership() {
+    const location = useLocation();
     return (
         <>
             <section className={css.hero}>
@@ -40,11 +42,16 @@ export function Partnership() {
                         <div className={css.line}>
 
                         </div>
-                        <a href="/TriPlanner">
-                            <div className={css.buttonlink}>
+                        <Link
+                            to={`/`}
+                            state={{ from: location }}
+                        >
+                            <a href="/#">
+                                <div className={css.buttonlink}>
 
-                            </div>
-                        </a>
+                                </div>
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </section>

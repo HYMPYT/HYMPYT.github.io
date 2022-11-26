@@ -1,7 +1,9 @@
 import { Header } from "../../Header/Header"
 import css from "./Contacts.module.css"
+import { Link, useLocation } from 'react-router-dom'
 
 export function Contacts() {
+    const location = useLocation();
     return (
         <>
             <section className={css.hero}>
@@ -71,11 +73,16 @@ export function Contacts() {
                             </div>
                             <span className={css.textcalendar}>Пн-Пт	с 9:00 до 00:00<br />
                                 Сб, Нд	с 10:00 до 19:00</span>
-                            <a href="/TriPlanner">
-                                <div className={css.buttonlink}>
+                            <Link
+                                to={`/`}
+                                state={{ from: location }}
+                            >
+                                <a href="/#">
+                                    <div className={css.buttonlink}>
 
-                                </div>
-                            </a>
+                                    </div>
+                                </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

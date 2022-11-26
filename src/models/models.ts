@@ -30,11 +30,27 @@ export interface FlightTicketInfo {
 }
 
 export interface RailwayTicketInfo {
-	id: string;
-	trainNumber: string;
-	carriageNumber: number;
-	classType: string;
-	carriageType: string;
+    id: string;
+    trainNumber: string;
+    carriageNumber: number;
+    classType: string;
+    carriageType: string;
+}
+
+export interface RegisterUser{
+    firstname: string;
+    lastname: string;
+    email: string;
+    password: string;
+}
+
+export interface LoginUser{
+    email: string;
+    password: string;
+}
+
+export interface User{
+    role: string
 }
 
 export interface Ticket {
@@ -56,4 +72,17 @@ export interface Ticket {
     busTicketInfo?: BusTicketInfo;
     flightTicketInfo: FlightTicketInfo;
     railwayTicketInfo?: RailwayTicketInfo;
+}
+
+export interface SearchParams {
+    fromCity: CityProps
+    toCity: CityProps
+    dDate?: Date | null
+    rDate?: Date | null
+    type?: string
+}
+
+export interface CityProps {
+    id?: string;
+    name: string;
 }

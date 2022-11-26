@@ -1,0 +1,42 @@
+.header__features {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: flex-end;
+    align-items: baseline;
+    padding-top: 39px;
+    margin: 0;
+}
+
+a {
+    color: white;
+}
+
+.header__feature {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    padding-right: 40px;
+}
+
+.header__feature:not(:last-child) {
+    margin-right: 30px;
+}
+
+.logo {
+    position: absolute;
+    top: 39px;
+    left: 110px;
+}
+
+.header__images__left {
+    vertical-align: text-top;
+    margin-right: 8px;
+}
+
+.header__images__right {
+    vertical-align: middle;
+    margin-left: 8px;
+}

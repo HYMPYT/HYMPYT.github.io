@@ -1,14 +1,32 @@
 import css from './Ticket.module.css';
-import sprite from '../../images/sprite.svg';
-import place from '../../images/place.svg';
-import date from '../../images/date.svg';
-import pink from '../../images/pink.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { Navigation } from '../Navigation/Navigation';
 import logo from '../../images/search_logo.svg';
+import { TicketOffered } from '../TicketOffered/TicketOffered';
+import { useEffect, useState } from 'react';
+import { useGetTicketsQuery } from '../../store/triplanner/triplanner.api';
+import { SearchParams } from '../../models/models';
+import sprite from '../../images/sprite.svg';
+import place from '../../images/place.svg';
+import date from '../../images/date.svg';
 
 export function Ticket() {
-    const location = useLocation();
+    const location = useLocation()
+    const [searchParams, setSearchParams] = useState<SearchParams>()
+    useEffect(() => {
+        if (location.state) {
+            console.log(location.state)
+            let _state = location.state as any
+            setSearchParams(_state)
+        }
+    }, [location])
+    const { data } = useGetTicketsQuery({
+        fromId: searchParams?.fromCity.id ?? '',
+        toId: searchParams?.toCity?.id,
+        dDate: searchParams?.dDate?.toLocaleDateString(),
+        rDate: searchParams?.rDate?.toLocaleDateString(),
+        type: searchParams?.type
+    })
     return (
         <>
             <div className={css.ticket__header}>
@@ -79,6 +97,7 @@ export function Ticket() {
                                         placeholder="Чернівці, Україна"
                                         autoComplete="off"
                                         autoFocus
+                                        value={searchParams?.fromCity.name}
                                         className={css.input__direction}
                                     />
                                 </li>
@@ -104,6 +123,7 @@ export function Ticket() {
                                         placeholder="Lausanne, Schweiz (QLS)"
                                         autoComplete="off"
                                         autoFocus
+                                        value={searchParams?.toCity?.name}
                                         className={css.input__direction}
                                     />
                                     <svg
@@ -130,6 +150,7 @@ export function Ticket() {
                                         autoComplete="off"
                                         autoFocus
                                         placeholder="01.09.2022"
+                                        value={searchParams?.dDate?.toLocaleDateString()}
                                         className={css.input__date}
                                     />
                                 </li>
@@ -147,6 +168,7 @@ export function Ticket() {
                                         autoComplete="off"
                                         autoFocus
                                         placeholder="Назад"
+                                        value={searchParams?.rDate?.toLocaleDateString()}
                                         className={css.input__date}
                                     />
                                 </li>
@@ -158,6 +180,7 @@ export function Ticket() {
                                     <label className={css.radio__route__label}>
                                         <input
                                             type="radio"
+                                            name="radio"
                                             id="route__check"
                                             className={css.radio__route__input}
                                         />
@@ -168,6 +191,7 @@ export function Ticket() {
                                     <label className={css.radio__route__label}>
                                         <input
                                             type="radio"
+                                            name="radio"
                                             id="route__check"
                                             className={css.radio__route__input}
                                         />
@@ -180,6 +204,7 @@ export function Ticket() {
                                     <label className={css.radio__route__label}>
                                         <input
                                             type="radio"
+                                            name="radio"
                                             id="route__check"
                                             className={css.radio__route}
                                         />
@@ -190,6 +215,7 @@ export function Ticket() {
                                     <label className={css.radio__route__label}>
                                         <input
                                             type="radio"
+                                            name="radio"
                                             id="route__check"
                                             className={css.radio__route}
                                         />
@@ -217,547 +243,7 @@ export function Ticket() {
                                 </button>
                             </ul>
                         </div>
-                        <div className={css.offered__ticket}>
-                            <ul className={css.travels__filter__btn}>
-                                <li>
-                                    <button type="button" className={css.transport__price__btn}>
-                                        найдешевший
-                                    </button>
-                                </li>
-
-                                <li className={css.price__btn}>
-                                    <button
-                                        type="button"
-                                        className={css.transport__filter__price}
-                                    >
-                                        ~ 37 год
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        type="button"
-                                        className={css.transport__filter__price}
-                                    >
-                                        ~ 79 EUR
-                                    </button>
-                                </li>
-                            </ul>
-                            <ul className={css.travel__options__images}>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-directions_bus-2'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.arrow}>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-yellow-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-directions_bus-2'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-yellow-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-directions_railway-2'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-pink-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-directions_railway-2'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-pink-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-flight-2'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-blue-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <img src={pink} alt="" width="17px" height="20px" />
-                                </li>
-                            </ul>
-                            <ul className={css.routes}>
-                                <li className={css.route}>
-                                    Залізничний вокзал “Чернівці”
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-yellow-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>
-                                    Автовокзал Катовіце
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-yellow-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>
-                                    Katowice Sadowa
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-pink-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>
-                                    Wien
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-pink-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>
-                                    Zurich (ZRH)
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-blue-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>Lausanne (QLS)</li>
-                                <li className={css.notification}>
-                                    <p>
-                                        <svg
-                                            width="23px"
-                                            height="22px"
-                                            aria-label=""
-                                            className={css.notification__image}
-                                        >
-                                            <use href={sprite + '#icon-notification'}></use>
-                                        </svg>
-                                    </p>
-                                    Наразі через введення Правового режиму Воєнного стану в
-                                    Україні проходження кордону може займати більше часу! Читати
-                                    більше: dpsu.gov.ua
-                                </li>
-                                <div className={css.ticket__buttons}>
-                                    <button type="button" className={css.download__btn}>
-                                        <svg
-                                            width="16px"
-                                            height="16px"
-                                            aria-label=""
-                                            className={css.button__icon}
-                                        >
-                                            <use href={sprite + '#icon-pdf'}></use>
-                                        </svg>
-                                        <span className={css.button__text}>Завантажити PDF</span>
-                                    </button>
-
-                                    <button type="button" className={css.search__btn}>
-                                        <svg
-                                            width="16px"
-                                            height="16px"
-                                            aria-label=""
-                                            className={css.button__icon}
-                                        >
-                                            <use href={sprite + '#icon-search'}></use>
-                                        </svg>
-                                        <span className={css.button__text}> Відкрити деталі</span>
-                                    </button>
-                                </div>
-                            </ul>
-                        </div>
-                        <div className={css.offered__ticket}>
-                            <ul className={css.travels__filter__btn}>
-                                <li>
-                                    <button type="button" className={css.transport__recommend}>
-                                        рекомендуємо
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        type="button"
-                                        className={css.transport__price__button}
-                                    >
-                                        найдешевший
-                                    </button>
-                                </li>
-                                <li className={css.price__btn}>
-                                    <button
-                                        type="button"
-                                        className={css.transport__filter__price}
-                                    >
-                                        ~ 37 год
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        type="button"
-                                        className={css.transport__filter__price}
-                                    >
-                                        ~ 79 EUR
-                                    </button>
-                                </li>
-                            </ul>
-                            <ul className={css.travel__options__images}>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-directions_bus-2'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.arrow}>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-yellow-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-directions_bus-2'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-yellow-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-directions_railway-2'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-pink-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-directions_railway-2'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-pink-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-flight-2'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-blue-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <img src={pink} alt="" width="17px" height="20px" />
-                                </li>
-                            </ul>
-                            <ul className={css.routes}>
-                                <li className={css.route}>
-                                    Залізничний вокзал “Чернівці”
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-yellow-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>
-                                    Автовокзал Катовіце
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-yellow-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>
-                                    Katowice Sadowa
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-pink-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>
-                                    Wien
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-pink-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>
-                                    Zurich (ZRH)
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-blue-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>Lausanne (QLS)</li>
-                                <li className={css.notification}>
-                                    <p>
-                                        <svg
-                                            width="23px"
-                                            height="22px"
-                                            aria-label=""
-                                            className={css.notification__image}
-                                        >
-                                            <use href={sprite + '#icon-notification'}></use>
-                                        </svg>
-                                    </p>
-                                    Наразі через введення Правового режиму Воєнного стану в
-                                    Україні проходження кордону може займати більше часу! Читати
-                                    більше: dpsu.gov.ua
-                                </li>
-                                <div className={css.ticket__buttons}>
-                                    <button type="button" className={css.download__btn}>
-                                        <svg
-                                            width="16px"
-                                            height="16px"
-                                            aria-label=""
-                                            className={css.button__icon}
-                                        >
-                                            <use href={sprite + '#icon-pdf'}></use>
-                                        </svg>
-                                        <span className={css.button__text}>Завантажити PDF</span>
-                                    </button>
-
-                                    <button type="button" className={css.search__btn}>
-                                        <svg
-                                            width="16px"
-                                            height="16px"
-                                            aria-label=""
-                                            className={css.button__icon}
-                                        >
-                                            <use href={sprite + '#icon-search'}></use>
-                                        </svg>
-                                        <span className={css.button__text}> Відкрити деталі</span>
-                                    </button>
-                                </div>
-                            </ul>
-                        </div>
-                        <div className={css.offered__ticket}>
-                            <div className={css.last__option}>
-                                <ul className={css.travels__filter__btn}>
-                                    <li className={css.price__btn}>
-                                        <button
-                                            type="button"
-                                            className={css.transport__filter__price}
-                                        >
-                                            ~ 37 год
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button
-                                            type="button"
-                                            className={css.transport__filter__price}
-                                        >
-                                            ~ 79 EUR
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <ul className={css.travel__options__images}>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-directions_bus-2'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.arrow}>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-yellow-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-directions_bus-2'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-yellow-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-directions_railway-2'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-pink-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-directions_railway-2'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-pink-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="24px" height="24px" aria-label="">
-                                        <use href={sprite + '#icon-flight-2'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg width="34px" height="8px" aria-label="">
-                                        <use href={sprite + '#icon-blue-arrow'}></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <img src={pink} alt="" width="17px" height="20px" />
-                                </li>
-                            </ul>
-                            <ul className={css.routes}>
-                                <li className={css.route}>
-                                    Залізничний вокзал “Чернівці”
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-yellow-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>
-                                    Автовокзал Катовіце
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-yellow-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>
-                                    Katowice Sadowa
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-pink-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>
-                                    Wien
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-pink-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>
-                                    Zurich (ZRH)
-                                    <svg
-                                        width="3px"
-                                        height="6px"
-                                        aria-label=""
-                                        className={css.link__icon}
-                                    >
-                                        <use href={sprite + '#icon-blue-link'}></use>
-                                    </svg>
-                                </li>
-                                <li className={css.route}>Lausanne (QLS)</li>
-                                <li className={css.notification}>
-                                    <p>
-                                        <svg
-                                            width="23px"
-                                            height="22px"
-                                            aria-label=""
-                                            className={css.notification__image}
-                                        >
-                                            <use href={sprite + '#icon-notification'}></use>
-                                        </svg>
-                                    </p>
-                                    Наразі через введення Правового режиму Воєнного стану в
-                                    Україні проходження кордону може займати більше часу! Читати
-                                    більше: dpsu.gov.ua
-                                </li>
-                                <div className={css.ticket__buttons}>
-                                    <button type="button" className={css.download__btn}>
-                                        <svg
-                                            width="16px"
-                                            height="16px"
-                                            aria-label=""
-                                            className={css.button__icon}
-                                        >
-                                            <use href={sprite + '#icon-pdf'}></use>
-                                        </svg>
-                                        <span className={css.button__text}>Завантажити PDF</span>
-                                    </button>
-
-                                    <button type="button" className={css.search__btn}>
-                                        <svg
-                                            width="16px"
-                                            height="16px"
-                                            aria-label=""
-                                            className={css.button__icon}
-                                        >
-                                            <use href={sprite + '#icon-search'}></use>
-                                        </svg>
-                                        <span className={css.button__text}> Відкрити деталі</span>
-                                    </button>
-                                </div>
-                            </ul>
-                        </div>
+                        {data?.map(ticket => <TicketOffered place={ticket.from.name} price={ticket.price} type={ticket.ticketType} departurePlace={ticket.to.name} />)}
                     </div>
                 </div>
                 <div className={css.navigation}>

@@ -40,15 +40,20 @@ export function Header() {
             </svg>
           </li>
           <li className={css.header__feature}>
-            <svg
-              width="14px"
-              height="16px"
-              aria-label=""
-              className={css.header__images__left}
+            <Link
+              to={`/help`}
+              state={{ from: location }}
             >
-              <use href={sprite + '#icon-support'}></use>
-            </svg>
-            Допомога
+              <svg
+                width="14px"
+                height="16px"
+                aria-label=""
+                className={css.header__images__left}
+              >
+                <use href={sprite + '#icon-support'}></use>
+              </svg>
+              Допомога
+            </Link>
           </li>
           <li className={css.header__feature}>
             <svg
@@ -70,18 +75,18 @@ export function Header() {
             </svg>
           </li>
           <li>
-          <Link to={`/cabinet/settings`} state={{ from: location }} >
-            <button type="button" className={css.button__login}>
-              <svg
-                width="20px"
-                height="20px"
-                aria-label="Увійти"
-                className={css.login__icon}
-              >
-                <use href={sprite + '#icon-login'}></use>
-              </svg>
-              <span className={css.login__text}>Увійти</span>
-            </button>
+            <Link to={`/auth`} state={{ from: location }} >
+              <button type="button" className={css.button__login}>
+                <svg
+                  width="20px"
+                  height="20px"
+                  aria-label="Увійти"
+                  className={css.login__icon}
+                >
+                  <use href={sprite + '#icon-login'}></use>
+                </svg>
+                <span className={css.login__text}>Увійти</span>
+              </button>
             </Link>
           </li>
         </ul>

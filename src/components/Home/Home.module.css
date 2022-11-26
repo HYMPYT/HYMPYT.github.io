@@ -11,6 +11,14 @@
   margin-bottom: 52px;
 }
 
+ul.direction__images li a:hover {
+  color: rgba(161, 220, 255, 0.7)
+}
+
+ul.direction__images li a:enabled {
+  color: rgba(9, 87, 133, 0.7)
+}
+
 .ticket {
   width: 1240px;
   position: absolute;

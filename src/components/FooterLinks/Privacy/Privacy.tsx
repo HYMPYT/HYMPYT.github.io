@@ -1,7 +1,9 @@
 import { Header } from "../../Header/Header"
 import css from "./Privacy.module.css"
+import { Link, useLocation } from 'react-router-dom'
 
 export function Privacy() {
+    const location = useLocation();
     return (
         <>
             <section className={css.hero}>
@@ -86,11 +88,16 @@ export function Privacy() {
                                     Якщо у вас є запитання щодо цієї політики або ви хотіли б дізнатися більше про файли cookie, які використовуються на наших вебсайтах
                                 </div>
                             </div>
-                            <a href="/TriPlanner">
-                                <div className={css.buttonlink}>
+                            <Link
+                                to={`/`}
+                                state={{ from: location }}
+                            >
+                                <a href="/#">
+                                    <div className={css.buttonlink}>
 
-                                </div>
-                            </a>
+                                    </div>
+                                </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
